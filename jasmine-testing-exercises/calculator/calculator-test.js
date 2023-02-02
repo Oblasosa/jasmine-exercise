@@ -22,6 +22,10 @@ it("should return a result with 2 decimal places", function() {
 
 /// etc
 
-it("should accept % inputs", function() {
-
+it("should accept negative rates", function() {
+  const values = {
+    amount: 1000,
+    years: 10,
+    rate: -10.12
+  }
 })
