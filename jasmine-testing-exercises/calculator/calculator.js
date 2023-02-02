@@ -25,9 +25,9 @@ function setupIntialValues() {
   const amountInput = document.getElementById("loan-amount");
   amountInput.value = values.amount;
   const yearInput = document.getElementById("loan-years");
-  yearInput = values.years;
+  yearInput.value = values.years;
   const rateInput = document.getElementById("loan-rate");
-  rateInput = values.rate;
+  rateInput.value = values.rate;
   update();
 }
 
@@ -45,7 +45,7 @@ function calculateMonthlyPayment(values) {
   const n = Math.floor(values.years * 12);
   const monthlyRate = ((values.rate / 100) / 12);
   return (
-    (monthly.rate * values.amount) / (1 - Math.pow((1 + monthlyRate), -n))
+    (monthlyRate * values.amount) / (1 - Math.pow((1 + monthlyRate), -n))
   ).toFixed(2);
 }
 
