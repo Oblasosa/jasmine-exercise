@@ -55,3 +55,5 @@ function updateMonthly(monthly) {
   const monthlyUpdated = document.getElementById("monthly-payment");
   monthlyUpdated.innerText = "$" + monthly;
 }
+
+
